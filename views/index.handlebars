@@ -1,0 +1,54 @@
+<div>
+
+    <div class="row d-flex justify-content-center">
+        <img src="assets/image/Burger.png" class="img-fluid burgerImg" alt="Image of Burger">
+        <h1 class="d-flex justify-content-center">Eat the Burger!</h1>
+    </div>
+
+    <div class="row">
+        <h2 class="d-flex justify-content-center mt-4">Name a Burger</h2>
+        <form id="submitButton" class="d-flex justify-content-center">
+            <label for="burgerName"></label>
+            <input type="text" id="burgerName" name="burger_name">
+            <button type="submit">Add Burger!</button>
+        </form>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-md d-flex justify-content-center">
+
+            <div class="card populate" style="width: 20rem;">
+                <h2>Burger Ordered</h2>
+                <div class="card-body">
+                    <div>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+                        <li>{{this.burger_name}}
+                            <button class="devourButton" data-id="{{this.id}}" data-newBurger="{{devoured}}">Devour!</button>
+                        </li>
+                        {{/unless}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-md d-flex justify-content-center">
+
+            <div class="card populate" style="width: 20rem;">
+                <h2>Devoured!</h2>
+                <div class="card-body">
+                    <div>
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        <li>{{this.burger_name}}</li>
+                        {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
