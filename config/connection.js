@@ -3,6 +3,7 @@ const util = require("util");
 require('dotenv').config();
 var connection;
 
+// Establishes the connection to the remote db or the local one.
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {

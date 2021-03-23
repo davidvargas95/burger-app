@@ -1,3 +1,4 @@
+// Provides functionality to the add burger button
 $(function () {
     $("#submitButton").on("submit", function (event) {
         event.preventDefault();
@@ -16,6 +17,7 @@ $(function () {
         )
     })
 
+    // Provides functionality to the devour button
     $(".devourButton").on("click", function(event){
         event.preventDefault();
 

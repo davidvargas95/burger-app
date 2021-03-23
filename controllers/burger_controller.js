@@ -9,6 +9,7 @@ router.get("/", function (req, res) {
     });
 });
 
+// Post method for Burger App
 router.post("/api/burgers", function (req, res) {
     burger.insertOne(
         ["burger_name"],
@@ -17,6 +18,7 @@ router.post("/api/burgers", function (req, res) {
         });
 });
 
+// Update method for Burger App
 router.put("/api/burgers/:id", function (req, res) {
     const updateBurgerId = "id=" + req.params.id;
     burger.updateOne(

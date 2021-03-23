@@ -1,5 +1,7 @@
 const orm = require("../config/orm.js");
 
+
+// Data models for Burger App
 const burger = {
     selectAll: function (cb) {
         orm.selectAll("burgers", function (res) {
